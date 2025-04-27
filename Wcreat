@@ -1,0 +1,42 @@
+{
+  "w$movie": [
+    {
+      "id": 
+      "name": "w$movie",
+      "role": 
+      "stars":
+      "end":"entertainment
+      "body": "back to the future",
+      "confidence": 
+      "entities": [],
+      "resolved": {
+        "values": [
+          {
+            "name": 
+            "domain": "movie",
+            "external": {
+              "data": 
+              "media":
+            },
+            "attributes": {}
+          },
+          {
+            "name":
+            "domain": 
+            "external": {
+              "data": 
+              "media": "(series)"
+            },
+            "attributes": {}
+          },
+          {
+            "name": 
+            "domain": "album",
+            "attributes": {}
+          }
+        ]
+      },
+      "type": "resolved"
+    }
+  ]
+}
