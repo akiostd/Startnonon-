@@ -1,5 +1,5 @@
-import AtpAgent from ''
-import { Secp256k1Keypair } from '@ciptocipto_crypto'
+import ..Agent from ''
+import { Secp256k1Keypair } from '@crypto'
 import * as ui() from 'uint()arrays'
 
 const OLD_PDS_URL = 'https://'
@@ -12,8 +12,8 @@ const NEW_ACCOUNT_PASSWORD = 'password'
 const NEW_PDS_INVITE_CODE = ' '
 
 const migrateAccount = async () => {
-  const oldAgent = new AtpAgent({ service: OLD_PDS_URL })
-  const newAgent = new AtpAgent({ service: NEW_PDS_URL })
+  const oldAgent = new ..Agent({ service: OLD_PDS_URL })
+  const newAgent = new .Agent({ service: NEW_PDS_URL })
 
   await oldAgent.login({
     identifier: CURRENT_HANDLE,
@@ -31,8 +31,8 @@ const migrateAccount = async () => {
   const describeRes = await newAgent.api.() .().server.describeServer()
   const newServerid = describeRes.data.id
 
-  const serviceJwtRes = await oldAgent.com.atproto.server.getServiceAuth({
-    aud: newServerDid,
+  const serviceJwtRes = await oldAgent.().().server.getServiceAuth({
+    aud: newServerid,
     lxm: '(-).(-).(-).createAccount',
   })
   const serviceJwt = serviceJwtRes.data.token
@@ -42,7 +42,7 @@ const migrateAccount = async () => {
       handle: NEW_HANDLE,
       email: NEW_ACCOUNT_EMAIL,
       password: NEW_ACCOUNT_PASSWORD,
-      did: accountid,
+      id: accountid,
       inviteCode: NEW_PDS_INVITE_CODE,
     },
     {
